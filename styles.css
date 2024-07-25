@@ -1,0 +1,289 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title-container a {
+  margin-left: 150px;
+  text-decoration: none;
+}
+
+/* Внутри стилей header */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7000e0;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* Навигация */
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7000e0;
+}
+
+.login-button {
+  background-color: #7000e0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #ad06ea;
+}
+
+/* Основной контент */
+main {
+  padding: 20px 0;
+}
+
+/* Раздел с предложениями */
+.deals {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.deal {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.deal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для изображения внутри .deal */
+.deal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  max-height: 150px;
+}
+
+.deal:hover img {
+  opacity: 0.8;
+}
+
+/* Стили для заголовка h3 внутри .deal */
+.deal h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color:  #7000e0;
+}
+
+/* Стили для кнопок */
+.button {
+  background-color:  #7000e0;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ad06ea;
+}
+
+/* Футер */
+footer {
+  background-color: #7000e0; /* #333 */
+  color: #fff;    
+  padding: 20px 0; /* 20px 0 */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5%; 
+  z-index: 1;
+}
+
+/* Стили для изображения в футере */
+.footer-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Стили для логотипов партнеров */
+.partner-logo {
+  width: auto;
+  height: 90px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+/* Стиль кнопки "Предложить партнёра" */
+.feedback-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color:  #7000e0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.feedback-button:hover {
+  background-color: #ad06ea; /* Изменяем цвет при наведении */
+}
+
+/* Стиль модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стиль формы в модальном окне */
+#feedbackForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Личный кабинет */
+#user-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px; 
+}
+
+#avatar-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10%; 
+}
+
+#user-avatar {
+  width: 100%;
+  height: auto;
+}
+
+#user-info {
+  /* Стилизация текста */
+  font-size: 16px;
+}
+
+#user-info p {
+  margin-bottom: 5px;
+}
+
+#user-info span {
+  font-weight: bold;
+}
+
+/* Стили для аватарки */
+#avatar-container img { /* Изменяем стили для изображения внутри #avatar-container */
+  width: 100%; /* Задаем ширину изображения 100% контейнера */
+  height: auto; /* Автоматически устанавливаем высоту, чтобы сохранить пропорции */
+  object-fit: cover; /* Обрезаем изображение, чтобы оно полностью заполнило контейнер */
+}
